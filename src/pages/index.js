@@ -5,6 +5,7 @@ import Header from "../components/header"
 export default function Home() {
   return (
     <div style={{ color: `purple` }}>
+      <p>Under development. Come back soon!</p>
       <Link to="/contact/">Contact</Link>
       <Header headerText="Hello Gatsby!" />
       <p>What a world.</p>
