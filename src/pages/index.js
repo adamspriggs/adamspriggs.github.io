@@ -6,15 +6,33 @@ import Work from "../components/sections/work"
 import Education from "../components/sections/education"
 import Contact from "../components/sections/contact"
 
+import styled from 'styled-components'
+
+const StyledChat = styled.div`
+  position: fixed;
+  left: 1rem;
+  bottom: 1em;
+`
+
 export default function Home ({ data }) {
   return (
-    <Layout>
-      <Splash data={data.splash.edges}/>
-      <About data={data.about.edges}/>
-      <Work data={data.work.edges}/>
-      <Education data={data.education.edges}/>
-      <Contact data={data.contact.edges}/>
-    </Layout>
+    <div>
+      <Layout>
+        <Splash data={data.splash.edges}/>
+        <About data={data.about.edges}/>
+        <Work data={data.work.edges}/>
+        <Education data={data.education.edges}/>
+        <Contact data={data.contact.edges}/>
+      </Layout>
+      <StyledChat>
+        <iframe
+          allow="microphone;"
+          width="350"
+          height="430"
+          src="https://console.dialogflow.com/api-client/demo/embedded/dfccd048-060f-492d-89f3-492f659fd03e">
+        </iframe>
+      </StyledChat>
+    </div>
   )
 }
 
